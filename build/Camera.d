@@ -1,4 +1,5 @@
-main.o: /home/hassan/projects/Insta3ds_v2/source/main.cpp \
+Camera.o: /home/hassan/projects/Insta3ds_v2/source/lib/Camera.cpp \
+ /home/hassan/projects/Insta3ds_v2/source/lib/Camera.h \
  /opt/devkitpro/libctru/include/3ds.h \
  /opt/devkitpro/libctru/include/3ds/types.h \
  /opt/devkitpro/libctru/include/3ds/result.h \
@@ -84,7 +85,6 @@ main.o: /home/hassan/projects/Insta3ds_v2/source/main.cpp \
  /opt/devkitpro/libctru/include/3ds/font.h \
  /opt/devkitpro/libctru/include/3ds/gdbhio_dev.h \
  /opt/devkitpro/libctru/include/3ds/3dslink.h \
- /home/hassan/projects/Insta3ds_v2/source/lib/Camera.h \
  /opt/devkitpro/libctru/include/citro2d.h \
  /opt/devkitpro/libctru/include/citro3d.h \
  /opt/devkitpro/libctru/include/c3d/types.h \
@@ -109,6 +109,7 @@ main.o: /home/hassan/projects/Insta3ds_v2/source/main.cpp \
  /opt/devkitpro/libctru/include/c2d/sprite.h \
  /opt/devkitpro/libctru/include/c2d/text.h \
  /opt/devkitpro/libctru/include/c2d/font.h
+/home/hassan/projects/Insta3ds_v2/source/lib/Camera.h:
 /opt/devkitpro/libctru/include/3ds.h:
 /opt/devkitpro/libctru/include/3ds/types.h:
 /opt/devkitpro/libctru/include/3ds/result.h:
@@ -194,7 +195,6 @@ main.o: /home/hassan/projects/Insta3ds_v2/source/main.cpp \
 /opt/devkitpro/libctru/include/3ds/font.h:
 /opt/devkitpro/libctru/include/3ds/gdbhio_dev.h:
 /opt/devkitpro/libctru/include/3ds/3dslink.h:
-/home/hassan/projects/Insta3ds_v2/source/lib/Camera.h:
 /opt/devkitpro/libctru/include/citro2d.h:
 /opt/devkitpro/libctru/include/citro3d.h:
 /opt/devkitpro/libctru/include/c3d/types.h:

@@ -14,6 +14,10 @@ int main()
     u32 kDown;
     u32 kHeld;
 
+    CameraModel _m;
+    CameraView _v;
+    CameraController controller(&_m, &_v);
+
     while (aptMainLoop())
     {
 	hidScanInput();
@@ -24,5 +28,7 @@ int main()
 	{
 	    break;
 	}
+
+	controller.selectCamera();
     }
 }
