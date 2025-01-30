@@ -5,18 +5,21 @@
 #include "lib/Camera.h"
 int main()
 {
-    acInit();
-    gfxInitDefault();
-
-    gfxSetDoubleBuffering(GFX_TOP, true);
-    gfxSetDoubleBuffering(GFX_BOTTOM, false);
+    acInit();    
 
     u32 kDown;
     u32 kHeld;
 
     CameraModel _m;
     CameraView _v;
-    CameraController controller(&_m, &_v);
+    ImageBuffer _b;
+    CameraController controller(&_m, &_v, &_b);
+
+    gfxFlushBuffers();
+    gspWaitForVBlank();
+    gfxSwapBuffers();
+
+    bool held_R = false;
 
     while (aptMainLoop())
     {
@@ -28,7 +31,29 @@ int main()
 	{
 	    break;
 	}
+	
+	if ((kHeld & KEY_R) && !held_R)
+	{
+	    
+	    gfxFlushBuffers();
+            gspWaitForVBlank();
+	    gfxSwapBuffers();
+	    held_R = true;
+	    controller.takePhoto();
+	}
 
-	controller.selectCamera();
+        else if (!(kHeld & KEY_R))
+	{
+	    held_R = false;
+	}
+
+	controller.presentPhoto();
+        gfxFlushBuffers();
+	gspWaitForVBlank();
+	gfxSwapBuffers();
     }
+
+    controller.cleanup();
+
+    return 0;
 }
